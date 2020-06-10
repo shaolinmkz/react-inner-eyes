@@ -12,7 +12,7 @@ npm install react-inner-eyes
 # Usage
 React inner eyes can be used as a Hook or Higher Order Component (HOC)
 
-[DEMO](https://codesandbox.io/s/react-inner-eyes-demo-f5xkt)
+[DEMO](https://codesandbox.io/s/f5xkt)
 
 # As A Hook
 
@@ -99,12 +99,13 @@ const MainApp = () => {
 ```
 
 
+
 # As A Higher Order Component
 
 ```
 import { InnerEyesProvider, withInnerEyes } from 'react-inner-eyes';
 
-const Child = (props: PropsWithChildren<any>) => {
+const Child = (props) => {
     const [childNum, setChildNum] = useState(0);
     const [randomValue, setRandomValue] = useState('Nothing...');
 
@@ -151,7 +152,7 @@ const Child = (props: PropsWithChildren<any>) => {
 export default withInnerEyes(Child);
 
 
-const Parent = (props: PropsWithChildren<any>) => {
+const Parent = (props) => {
     const { getFuncs } = props;
     
     const randomFuncTwo = getFuncs('randomFuncTwo');
@@ -188,3 +189,10 @@ const MainApp = () => {
     );
 };
 ```
+
+
+---
+
+[DEMO](https://codesandbox.io/s/f5xkt)
+
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1591830086/inner-eyes/inner-eyes-demo.gif)
