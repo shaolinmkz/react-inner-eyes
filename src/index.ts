@@ -3,7 +3,7 @@ import withInnerEyes from './context/hoc';
 import InnerEyesProvider from './context';
 
 export {
-  useInnerEyes,
-  withInnerEyes,
-  InnerEyesProvider,
+  useInnerEyes, // Hook
+  withInnerEyes, // HOC
+  InnerEyesProvider, // Provider
 };
