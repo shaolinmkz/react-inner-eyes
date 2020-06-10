@@ -12,6 +12,8 @@ npm install react-inner-eyes
 # Usage
 React inner eyes can be used as a Hook or Higher Order Component (HOC)
 
+[DEMO](https://codesandbox.io/s/react-inner-eyes-demo-f5xkt)
+
 # As A Hook
 
 ```

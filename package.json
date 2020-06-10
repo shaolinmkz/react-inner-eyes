@@ -8,7 +8,13 @@
     "test": "jest --coverage",
     "build": "tsc -p ."
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "hook",
+    "userInnerEyes",
+    "withInnerEyes",
+    "InnerEyesProvider"
+  ],
   "author": "Nwabuzor, Chukwuemeka Obiora",
   "license": "ISC",
   "devDependencies": {
