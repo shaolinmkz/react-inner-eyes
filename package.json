@@ -1,10 +1,11 @@
 {
   "name": "react-inner-eyes",
   "version": "1.0.0",
-  "description": "",
+  "description": "A React hook that enables a parent component access the functions of a child component",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
+    "test": "jest --coverage",
     "build": "tsc -p ."
   },
   "keywords": [],
@@ -13,20 +14,21 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.10.1",
     "@babel/preset-typescript": "^7.9.0",
     "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/react": "^10.0.4",
+    "@testing-library/react": "^10.2.1",
     "@types/jest": "^25.2.1",
     "@types/react": "^16.9.34",
     "babel-jest": "^25.5.1",
     "jest": "^25.5.4",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "react": ">=16.0.0"
+    "react": "16.8.x"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shaolinmkz/react-inner-eyes"

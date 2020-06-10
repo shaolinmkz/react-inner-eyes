@@ -1,17 +1,18 @@
 import { useReducer } from "react";
-import { ADD } from "./actionTypes";
+import { ADD, REMOVE } from "./actionTypes";
 
-const initialState = {};
 
 interface Action {
-    type: string;
-    payload: {
-        name?: (string | any);
-        value?: string;
-    }
-}
+  type: string;
+  payload: {
+    name: any;
+    value?: string;
+  }
+};
 
-const innerEyesReducer = (state = initialState, action: Action) => {
+const initialState: any = {};
+
+export const innerEyesReducer = (state = initialState, action: Action) => {
     const { type, payload } = action;
    const { name, value } = payload;
 
@@ -21,6 +22,12 @@ const innerEyesReducer = (state = initialState, action: Action) => {
         ...state,
         [name]: value
       };
+    case REMOVE:
+      return (() => {
+        const newState = { ...state };
+        delete newState[name];
+        return newState;
+      })()
     default:
       return state;
   }
