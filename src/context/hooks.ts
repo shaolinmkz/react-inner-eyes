@@ -17,9 +17,9 @@ const useInnerEyes = (): any => {
     if(typeof name === 'string' && typeof value === 'function' && !isExist(name, state)) {
       dispatch({ type: ADD, payload: { name, value } });
     } else if (typeof name !== 'string') {
-      error('name is not a string');
+      error(`${name} is not a string`);
     } else {
-      error('value is not a function');
+      error(`${value} is not a function`);
     }
   };
 
