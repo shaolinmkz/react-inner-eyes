@@ -17,9 +17,9 @@ const withInnerEyes = (Comp: FC): Function => {
     if(typeof name === 'string' && typeof value === 'function' && !isExist(name, state)) {
       dispatch({ type: ADD, payload: { name, value } });
     } else if (typeof name !== 'string') {
-      error('name is not a string');
+      error(`${name} is not a string, The first argument should be a string`);
     } else {
-      error('value is not a function');
+      error(`${value} is not a function, The second argument should be a function`);
     }
   };
 
