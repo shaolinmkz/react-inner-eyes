@@ -3,7 +3,7 @@ import { render, waitFor, screen } from '@testing-library/react';
 import MainApp from './MainApp';
 
 describe('InnerEyesProvider and useInnerEyes', () => {
-
+    console.error = jest.fn();
     it('should render the all test components without failing', async () => {
         const appComp = render(<MainApp />);
 

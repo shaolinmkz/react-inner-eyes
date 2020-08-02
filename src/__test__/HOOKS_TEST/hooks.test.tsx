@@ -4,7 +4,7 @@ import MainApp from './MainApp';
 
 
 describe('InnerEyesProvider and useInnerEyes', () => {
-
+    console.error = jest.fn(); // Surpress errors
     it('should render the all test components without failing', async () => {
         const testComp = render(<MainApp />);
 

@@ -1,5 +1,6 @@
 import React, { createContext, ComponentProps } from "react";
 import reducer from "./reducer";
+import { doNothingFunc } from "../helpers";
 
 interface initInterface {
     state: {
@@ -8,7 +9,7 @@ interface initInterface {
     dispatch: React.Dispatch<any>;
 };
 
-let initData: initInterface = { dispatch: () => {}, state: {} };
+let initData: initInterface = { dispatch: doNothingFunc, state: {} };
 
 export const innerEyesContext = createContext(initData);
 
