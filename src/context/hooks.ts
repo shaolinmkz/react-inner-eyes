@@ -3,7 +3,6 @@ import { innerEyesContext } from "./index";
 import { ADD, REMOVE } from './actionTypes';
 import { isExist } from "../helpers";
 
-const { error } = console;
 
 
 const useInnerEyes = (): any => {
@@ -17,9 +16,9 @@ const useInnerEyes = (): any => {
     if(typeof name === 'string' && typeof value === 'function' && !isExist(name, state)) {
       dispatch({ type: ADD, payload: { name, value } });
     } else if (typeof name !== 'string') {
-      error(`${name} is not a string`);
+      console.error(`${name} is not a string`);
     } else {
-      error(`${value} is not a function`);
+      console.error(`${value} is not a function`);
     }
   };
 
