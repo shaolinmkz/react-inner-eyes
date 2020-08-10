@@ -1,6 +1,6 @@
 {
   "name": "react-inner-eyes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React hook that enables a parent component access the functions of a child component",
   "main": "lib/index.js",
   "types": "lib",
@@ -39,5 +39,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shaolinmkz/react-inner-eyes"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
