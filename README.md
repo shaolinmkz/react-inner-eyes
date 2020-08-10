@@ -1,7 +1,7 @@
 ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1591861948/inner-eyes/react-inner-eyes.png)
 
 # React Inner Eyes 👁
-[![CircleCI](https://circleci.com/gh/shaolinmkz/react-inner-eyes.svg?style=svg)](https://circleci.com/gh/shaolinmkz/react-inner-eyes)  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![NPM](https://img.shields.io/npm/v/react-inner-eyes.svg)](https://www.npmjs.com/package/react-inner-eyes)
+[![CircleCI](https://circleci.com/gh/shaolinmkz/react-inner-eyes.svg?style=svg)](https://circleci.com/gh/shaolinmkz/react-inner-eyes)  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![NPM](https://img.shields.io/npm/v/react-inner-eyes.svg)](https://www.npmjs.com/package/react-inner-eyes) [![Total Download](https://img.shields.io/npm/dt/react-inner-eyes.svg)](https://www.npmjs.com/package/react-inner-eyes)
 
 React inner eyes enables you access child components functionalities from a parent component without having to pass down props.
 
@@ -9,14 +9,16 @@ React inner eyes enables you access child components functionalities from a pare
 
 # Installation
 
-```bash
+```sh
 npm install react-inner-eyes
 ```
 
 # Usage
 React inner eyes can be used as a Hook or Higher Order Component (HOC)
 
-`js import { InnerEyesProvider, useInnerEyes, withInnerEyes } from 'react-inner-eyes';`
+```js
+import { InnerEyesProvider, useInnerEyes, withInnerEyes } from 'react-inner-eyes';
+```
 
 - **InnerEyesProvider:** This is usually wrapped around the main app component.
 - **useInnerEyes:** This hook is used inside functional components to `save`, `retrieve` or `remove` functions from the watch list.
