@@ -1,7 +1,7 @@
 ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1591861948/inner-eyes/react-inner-eyes.png)
 
 # React Inner Eyes 👁
-[![CircleCI](https://circleci.com/gh/shaolinmkz/react-inner-eyes.svg?style=svg)](https://circleci.com/gh/shaolinmkz/react-inner-eyes)
+[![CircleCI](https://circleci.com/gh/shaolinmkz/react-inner-eyes.svg?style=svg)](https://circleci.com/gh/shaolinmkz/react-inner-eyes)  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![NPM](https://img.shields.io/npm/v/react-inner-eyes.svg)](https://www.npmjs.com/package/react-inner-eyes)
 
 React inner eyes enables you access child components functionalities from a parent component without having to pass down props.
 
@@ -9,14 +9,14 @@ React inner eyes enables you access child components functionalities from a pare
 
 # Installation
 
-```
+```bash
 npm install react-inner-eyes
 ```
 
 # Usage
 React inner eyes can be used as a Hook or Higher Order Component (HOC)
 
-`import { InnerEyesProvider, useInnerEyes, withInnerEyes } from 'react-inner-eyes';`
+`js import { InnerEyesProvider, useInnerEyes, withInnerEyes } from 'react-inner-eyes';`
 
 - **InnerEyesProvider:** This is usually wrapped around the main app component.
 - **useInnerEyes:** This hook is used inside functional components to `save`, `retrieve` or `remove` functions from the watch list.
@@ -27,14 +27,14 @@ The functions the `withInnerEyes` and `useInnerEyes` makes available are:
 - **saveFunc:**
 Takes a string and a function as an argument.
 Example:
-```
+```js
 saveFunc('myAnonymousFunc', () => {});
 ```
 
 - **saveFuncs:**
 Takes an array of object. The objects properties are `name` and `value`. `name` is a string which represents the name of the function while `value` is a function.
 Example:
-```
+```js
   saveFuncs([
     { name: 'func1', value: () => {} },
     { name: 'func2', value: () => {} },
@@ -44,21 +44,21 @@ Example:
 - **removeFuncs:**
 This accepts an array of strings as an argument. The string represents names of functions you intend to remove from the eyes-watch 👀. 
 Example:
-```
+```js
 removeFuncs(['func1', 'func2']);
 ```
 
 - **removeFunc:**
 This takes an argument which is a string. The string represents the name of the function you intend to remove from the eyes-watch 👀.
 Example:
-```
+```js
 removeFunc('myAnonymousFunc');
 ```
 
 - **getFuncs:**
 This gets all the functions saved when invoked without an argument. When and argument is parsed, it returns a single function if it exists;
 Example:
-```
+```js
 const { func1, func2, myAnonymousFunc } = getFuncs(); // All can be retrieved
 
 const func2 = getFuncs('func2'); // Retrieved only func2
@@ -68,7 +68,7 @@ const func2 = getFuncs('func2'); // Retrieved only func2
 
 # As A Hook
 
-```
+```jsx
 import { InnerEyesProvider, useInnerEyes } from 'react-inner-eyes';
 
 const Child = () => {
@@ -154,7 +154,7 @@ const MainApp = () => {
 
 # As A Higher Order Component
 
-```
+```jsx
 import { InnerEyesProvider, withInnerEyes } from 'react-inner-eyes';
 
 const Child = (props) => {
