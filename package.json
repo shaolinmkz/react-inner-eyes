@@ -1,6 +1,6 @@
 {
   "name": "react-inner-eyes",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A React hook that enables a parent component access the functions of a child component",
   "main": "lib/index.js",
   "types": "lib",
@@ -14,6 +14,9 @@
     "userInnerEyes",
     "withInnerEyes",
     "InnerEyesProvider"
+  ],
+  "files": [
+    "lib"
   ],
   "author": "Nwabuzor, Chukwuemeka Obiora",
   "license": "ISC",
